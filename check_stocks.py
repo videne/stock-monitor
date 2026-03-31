@@ -103,7 +103,10 @@ def check_stock(url):
                 print(f"    -> Text în stoc în pagină: ÎN STOC")
                 return "stock", price
 
-            return "unknown", price
+if price is None:
+    print(f"    -> Preț negăsit, presupunem FĂRĂ STOC")
+    return "nostock", price
+return "unknown", price
 
         except requests.exceptions.Timeout:
             print(f"    Attempt {attempt+1}: timeout")
