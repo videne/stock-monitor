@@ -54,5 +54,13 @@
     "status": "stock",
     "lastCheck": "2026-03-31T10:52:38.298679+00:00",
     "lastChanged": null
-  }
+  },
+    {
+    "id": "prod8",
+    "url": "https://www.springfarma.com/system-kollagen-11000-curcuma-ghimbir-30-flacoane-doppelherz.html",
+    "name": "Curcuma + Ghimbir 11000, System Kollagen, 30 flacoane, Doppelherz ",
+    "status": "stock",
+    "lastCheck": "2026-03-31T10:52:22.647726+00:00",
+    "lastChanged": null
+  },
 ]
