@@ -66,162 +66,234 @@
   }
   .pcard:hover { border-color: var(--border2); }
   .pcard.active { border-color: var(--blue-border); background: var(--blue-bg); }
-  .pcard .pname { font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 5px; line-height: 1.3; padding-right: 18px; }
-  .pcard .pprice { font-size: 11px; color: var(--text2); margin-top: 3px; }
-  .badge { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; display: inline-block; letter-spacing: 0.02em; }
-  .badge-stock   { background: var(--green-bg); color: var(--green-text); }
-  .badge-nostock { background: var(--red-bg);   color: var(--red-text); }
-  .badge-unknown { background: var(--surface2);   color: var(--text3); border: 0.5px solid var(--border); }
-  .badge-error   { background: var(--amber-bg); color: var(--amber-text); }
-  .pcard .changed-tag { font-size: 10px; color: var(--amber-text); margin-top: 4px; display: block; }
-  .pcard .rm {
-    position: absolute; top: 7px; right: 8px;
-    background: none; border: none; cursor: pointer;
-    color: var(--text3); font-size: 13px; padding: 2px 4px;
-    border-radius: 3px; opacity: 0; transition: opacity 0.1s;
-    line-height: 1;
+  .pcard .pname { font-size: 12px; font-weight: 600; color: var(--text); margin-right: 18px; line-height: 1.35; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    border-radius: 999px; padding: 2px 8px;
+    font-size: 10px; font-weight: 700; letter-spacing: .02em;
+    margin-top: 7px;
+    border: 0.5px solid transparent;
   }
-  .pcard:hover .rm { opacity: 1; }
-  .rm:hover { color: var(--red-text); background: var(--red-bg); }
-
-  #add-area { padding: 12px; border-top: 0.5px solid var(--border); display: flex; flex-direction: column; gap: 7px; }
-
-  .btn {
-    width: 100%; padding: 8px 12px; font-size: 12px; font-weight: 500;
-    border: 0.5px solid var(--border2); border-radius: var(--radius);
-    background: var(--surface); color: var(--text);
-    cursor: pointer; font-family: var(--font); transition: background 0.1s;
+  .badge-stock   { background: var(--green-bg); color: var(--green-text); border-color: var(--green-border); }
+  .badge-nostock { background: var(--red-bg); color: var(--red-text); border-color: var(--red-border); }
+  .badge-unknown { background: var(--amber-bg); color: var(--amber-text); border-color: var(--amber-border); }
+  .badge-error   { background: var(--amber-bg); color: var(--amber-text); border-color: var(--amber-border); }
+  .pprice { display:block; font-size:11px; color:var(--text2); margin-top:6px; }
+  .changed-tag { display:block; font-size:10px; color:var(--amber-text); margin-top:4px; }
+  .rm {
+    position:absolute; top:8px; right:8px;
+    background:transparent; border:none; color:var(--text3);
+    cursor:pointer; font-size:12px; padding:2px;
   }
-  .btn:hover { background: var(--surface2); }
-  .btn-blue { background: var(--blue-bg); border-color: var(--blue-border); color: var(--blue-text); }
-  .btn-blue:hover { opacity: 0.85; }
-  .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .rm:hover { color: var(--red-text); }
+
+  #add-box {
+    padding: 10px 12px 14px;
+    border-top: 0.5px solid var(--border);
+    background: var(--surface);
+  }
+  #add-box .label { font-size:11px; color:var(--text3); margin-bottom:6px; }
+  #add-row { display:flex; gap:8px; }
+  #add-url {
+    flex:1; min-width:0; border:0.5px solid var(--border2); background:var(--surface2); color:var(--text);
+    border-radius: 8px; padding: 8px 10px; font-size:12px; outline:none;
+  }
+  #add-url:focus { border-color: var(--blue-border); }
+  #add-btn {
+    border:none; background:var(--text); color:#fff; border-radius:8px; padding: 8px 12px;
+    font-size:12px; font-weight:600; cursor:pointer;
+  }
+  #add-btn:hover { opacity:.9; }
 
   /* MAIN */
-  #main { flex: 1; overflow-y: auto; padding: 20px 24px; background: var(--bg); }
-  #main::-webkit-scrollbar { width: 6px; }
-  #main::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+  #main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #topbar {
+    height: 57px;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(14px);
+    border-bottom: 0.5px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    #topbar { background: rgba(37,37,35,0.78); }
+  }
+  #topbar-left { display:flex; flex-direction:column; gap:2px; }
+  #cal-title { font-size:15px; font-weight:600; color:var(--text); }
+  #cal-url-link { font-size:11px; color:var(--blue-text); text-decoration:none; display:none; }
+  #cal-url-link:hover { text-decoration:underline; }
 
-  #cal-header { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
-  #cal-title { font-size: 18px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  #cal-url-link { font-size: 11px; color: var(--blue-text); text-decoration: none; }
-  #cal-url-link:hover { text-decoration: underline; }
-  #year-sel {
-    padding: 5px 10px; font-size: 13px;
-    border: 0.5px solid var(--border2); border-radius: var(--radius);
-    background: var(--surface); color: var(--text); font-family: var(--font);
+  #topbar-right { display:flex; align-items:center; gap:10px; }
+  .meta { font-size:11px; color:var(--text3); }
+  select {
+    border:0.5px solid var(--border2);
+    background:var(--surface2);
+    color:var(--text);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size:12px;
+    outline:none;
   }
 
-  #legend { display: flex; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
-  .leg { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); }
-  .leg-dot { width: 11px; height: 11px; border-radius: 3px; }
+  #stats-bar {
+    display:flex; gap:10px; flex-wrap:wrap;
+    padding: 14px 18px 0;
+  }
+  .stat-card {
+    background: var(--surface);
+    border:0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    min-width: 130px;
+  }
+  .stat-label { font-size:11px; color:var(--text3); }
+  .stat-val { font-size:18px; font-weight:700; margin-top:2px; letter-spacing:-0.02em; }
 
-  #empty-msg { text-align: center; padding: 80px 20px; color: var(--text3); }
-  #empty-msg .ico { font-size: 36px; margin-bottom: 12px; }
-  #empty-msg p { font-size: 13px; line-height: 1.7; }
+  #content {
+    flex:1;
+    overflow:auto;
+    padding: 14px 18px 22px;
+  }
+  #content::-webkit-scrollbar { width: 8px; }
+  #content::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 8px; }
+
+  #loading-msg, #empty-msg {
+    color: var(--text3);
+    font-size: 13px;
+    padding: 40px 10px;
+    text-align: center;
+  }
 
   #cal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 14px;
+    margin-top: 14px;
   }
+
   .mcard {
     background: var(--surface);
     border: 0.5px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 14px;
+    padding: 12px 12px 10px;
   }
-  .mname { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 10px; text-transform: capitalize; letter-spacing: 0.01em; }
-  .mgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2.5px; }
-  .dlabel { font-size: 8.5px; color: var(--text3); text-align: center; padding: 1px 0; font-weight: 600; }
+  .mname {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .mgrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  .dlabel {
+    font-size: 10px;
+    color: var(--text3);
+    text-align: center;
+    padding-bottom: 3px;
+  }
   .dcell {
-    aspect-ratio: 1; border-radius: 3px; display: flex;
-    align-items: center; justify-content: center;
-    font-size: 9.5px; font-weight: 500; cursor: default;
-    position: relative; transition: transform 0.1s; user-select: none;
+    aspect-ratio: 1 / 1;
+    border-radius: 7px;
+    font-size: 11px;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--surface2);
+    color: var(--text2);
+    position: relative;
+    user-select: none;
   }
-  .dcell:hover { transform: scale(1.18); z-index: 5; }
-  .d-future  { background: transparent; color: var(--text3); }
   .d-stock   { background: var(--green-bg); color: var(--green-text); }
-  .d-nostock { background: var(--red-bg);   color: var(--red-text); }
-  .d-unknown { background: var(--surface2); color: var(--text3); }
-  .d-today   { outline: 2px solid var(--blue-border); outline-offset: -1px; }
+  .d-nostock { background: var(--red-bg); color: var(--red-text); }
+  .d-unknown { background: var(--amber-bg); color: var(--amber-text); }
+  .d-future  { background: transparent; color: var(--text3); border: 1px dashed var(--border); }
+  .d-today   { outline: 1.5px solid var(--blue-border); outline-offset: 1px; }
   .d-changed::after {
-    content: ''; position: absolute; top: 1px; right: 1px;
-    width: 3.5px; height: 3.5px; border-radius: 50%;
-    background: var(--amber-border);
+    content:"";
+    position:absolute; width:5px; height:5px;
+    border-radius:50%; background: var(--amber-border);
+    top:4px; right:4px;
   }
 
-  /* Stats bar */
-  #stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-  .stat-card {
-    background: var(--surface); border: 0.5px solid var(--border);
-    border-radius: var(--radius); padding: 10px 16px; flex: 1; min-width: 100px;
-  }
-  .stat-label { font-size: 11px; color: var(--text3); margin-bottom: 3px; }
-  .stat-val { font-size: 20px; font-weight: 600; color: var(--text); }
-
-  /* Tooltip */
   #tt {
-    position: fixed; pointer-events: none; z-index: 999;
-    background: var(--surface); border: 0.5px solid var(--border2);
-    border-radius: var(--radius); padding: 7px 11px; font-size: 11px;
-    display: none; max-width: 170px; color: var(--text);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+    position: fixed;
+    pointer-events:none;
+    z-index: 999;
+    background: rgba(28,28,26,.96);
+    color: #fff;
+    font-size: 11px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    max-width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    display:none;
+    line-height:1.4;
   }
 
-  #loading-msg { text-align: center; padding: 40px; color: var(--text2); font-size: 13px; }
+  @media (max-width: 860px) {
+    #app { flex-direction: column; height: auto; min-height: 100vh; }
+    #sidebar { width: 100%; min-width: 0; height: auto; border-right: none; border-bottom: 0.5px solid var(--border); }
+    #main { min-height: 0; }
+    #cal-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  }
 </style>
 </head>
 <body>
 <div id="app">
-  <div id="sidebar">
+  <aside id="sidebar">
     <div id="sidebar-top">
-      <h1>📦 Stock Monitor</h1>
-      <div class="sub" id="last-check">Nicio verificare înregistrată</div>
+      <h1>Stock Monitor</h1>
+      <div class="sub">Produse urmărite zilnic</div>
     </div>
     <div id="product-list"></div>
-    <div id="add-area">
-      <button class="btn btn-blue" id="reload-btn" onclick="reloadData()">↻ Reîncarcă datele</button>
+    <div id="add-box">
+      <div class="label">Adaugă produs nou (local)</div>
+      <div id="add-row">
+        <input id="add-url" type="text" placeholder="https://site.ro/produs..." />
+        <button id="add-btn" onclick="addProduct()">Adaugă</button>
+      </div>
     </div>
-  </div>
+  </aside>
 
-  <div id="main">
-    <div id="loading-msg">Se încarcă datele…</div>
-    <div id="content" style="display:none">
-      <div id="cal-header">
-        <span id="cal-title">Selectează un produs</span>
-        <a id="cal-url-link" href="#" target="_blank" rel="noopener" style="display:none">↗ vezi produs</a>
+  <main id="main">
+    <div id="topbar">
+      <div id="topbar-left">
+        <div id="cal-title">Se încarcă...</div>
+        <a id="cal-url-link" href="#" target="_blank" rel="noopener">Deschide produsul ↗</a>
+      </div>
+      <div id="topbar-right">
+        <div class="meta" id="last-check">—</div>
         <select id="year-sel" onchange="renderCalendar()"></select>
       </div>
-      <div id="stats-bar" style="display:none"></div>
-      <div id="legend">
-        <div class="leg"><div class="leg-dot" style="background:var(--green-bg);border:1px solid var(--green-border)"></div> În stoc</div>
-        <div class="leg"><div class="leg-dot" style="background:var(--red-bg);border:1px solid var(--red-border)"></div> Indisponibil</div>
-        <div class="leg"><div class="leg-dot" style="background:var(--surface2);border:1px solid var(--border)"></div> Necunoscut</div>
-        <div class="leg" style="position:relative"><div class="leg-dot d-changed" style="background:var(--amber-bg);border:1px solid var(--amber-border);position:relative"></div> Schimbare status</div>
-        <div class="leg"><div class="leg-dot" style="border:2px solid var(--blue-border)"></div> Azi</div>
-      </div>
-      <div id="empty-msg">
-        <div class="ico">📋</div>
-        <p>Selectează un produs din stânga<br>pentru a vedea calendarul stocurilor.</p>
-      </div>
-      <div id="cal-grid"></div>
     </div>
-  </div>
+
+    <div id="stats-bar" style="display:none"></div>
+
+    <div id="content">
+      <div id="loading-msg">Se încarcă datele…</div>
+      <div id="empty-msg" style="display:none">Adaugă sau selectează un produs pentru a vedea calendarul.</div>
+      <div id="cal-grid" style="display:none"></div>
+    </div>
+  </main>
 </div>
+
 <div id="tt"></div>
 
 <script>
-// ── CONFIG ──────────────────────────────────────────────────────────
-// Replace with your GitHub username and repo name after you create the repo
-const GITHUB_USER = "videne";
-const GITHUB_REPO = "stock-monitor";
-const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/data`;
-// ────────────────────────────────────────────────────────────────────
+const OWNER = "lupanionut";
+const REPO = "stock-monitor";
+const RAW_BASE = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/data`;
 
-const MONTHS = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie'];
-const DAYS = ['L','M','M','J','V','S','D'];
+const MONTHS = ["Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie",
+                "Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie"];
+const DAYS = ["L","M","M","J","V","S","D"];
 const today = new Date();
 const todayStr = today.toISOString().split('T')[0];
 
@@ -339,10 +411,10 @@ function renderSidebar() {
   }
   list.innerHTML = products.map(p => {
     const cls = p.status === 'stock' ? 'badge-stock' : p.status === 'nostock' ? 'badge-nostock' : p.status === 'error' ? 'badge-error' : 'badge-unknown';
-    const lbl = p.status === 'stock' ? 'ÎN STOC' : p.status === 'nostock' ? 'INDISPONIBIL' : p.status === 'error' ? 'EROARE' : 'NECUNOSCUT';
+    const lbl = p.status === 'stock' ? 'ÎN STOC' : p.status === 'nostock' ? 'FĂRĂ STOC' : p.status === 'error' ? 'EROARE' : 'NECUNOSCUT';
     const changed = p.lastChanged ? `<span class="changed-tag">↕ Schimbat ${p.lastChanged}</span>` : '';
     const local = p.localOnly ? `<span class="changed-tag" style="color:var(--text3)">⚠ Doar local</span>` : '';
-    const price = p.price ? `<span class="pprice">💰 ${p.price} lei</span>` : '';
+    const price = (p.status === 'nostock' || !p.price) ? `<span class="pprice">FĂRĂ STOC</span>` : `<span class="pprice">💰 ${p.price} lei</span>`;
     return `<div class="pcard ${selectedId===p.id?'active':''}" onclick="selectProduct('${p.id}')">
       <button class="rm" onclick="removeProduct('${p.id}',event)" title="Elimină">✕</button>
       <div class="pname">${p.name}</div>
@@ -392,7 +464,7 @@ function renderCalendar() {
   const pct = total > 0 ? Math.round((s.stock / total) * 100) : 0;
   stats.innerHTML = `
     <div class="stat-card"><div class="stat-label">Zile în stoc</div><div class="stat-val" style="color:var(--green-text)">${s.stock}</div></div>
-    <div class="stat-card"><div class="stat-label">Zile indisponibil</div><div class="stat-val" style="color:var(--red-text)">${s.nostock}</div></div>
+    <div class="stat-card"><div class="stat-label">Zile fără stoc</div><div class="stat-val" style="color:var(--red-text)">${s.nostock}</div></div>
     <div class="stat-card"><div class="stat-label">Disponibilitate</div><div class="stat-val">${total>0?pct+'%':'—'}</div></div>
     <div class="stat-card"><div class="stat-label">Schimbări status</div><div class="stat-val" style="color:var(--amber-text)">${s.changes}</div></div>`;
 
@@ -455,7 +527,7 @@ function buildMonth(year, month, prod) {
 
 function showTT(e, ds, entry) {
   const tt = document.getElementById('tt');
-  const st = entry.status === 'stock' ? '<span style="color:var(--green-text)">ÎN STOC</span>' : entry.status === 'nostock' ? '<span style="color:var(--red-text)">INDISPONIBIL</span>' : 'Necunoscut';
+  const st = entry.status === 'stock' ? '<span style="color:var(--green-text)">ÎN STOC</span>' : entry.status === 'nostock' ? '<span style="color:var(--red-text)">FĂRĂ STOC</span>' : 'Necunoscut';
   tt.innerHTML = `<strong>${ds}</strong><br>${st}${entry.changed ? '<br><span style="color:var(--amber-text)">↕ Status schimbat</span>' : ''}${entry.checked_at ? `<br><span style="color:var(--text3);font-size:10px">Verificat ${new Date(entry.checked_at).toLocaleTimeString('ro-RO',{hour:'2-digit',minute:'2-digit'})}</span>` : ''}`;
   tt.style.display = 'block';
   tt.style.left = (e.clientX + 14) + 'px';
