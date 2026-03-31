@@ -1,74 +1,380 @@
 [
   {
     "id": "prod1",
-    "url": "https://www.springfarma.com/magnevie-kids-30-comprimate-masticabile-sanofi.html",
-    "name": "Magnevie Kids 30 Comprimate Masticabile",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:00.870415+00:00",
+    "url": "https://www.springfarma.com/rilastil-aqua-intense-72-h-gel-crema-hidratanta-40ml.html",
+    "name": "Rilastil Aqua Intense 72H Gel Crema Hidratanta 40ml",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "37.32"
+    "price": null
   },
   {
     "id": "prod2",
-    "url": "https://www.springfarma.com/magnevie-express-20-plicuri-unidoza.html",
-    "name": "Magnevie Express 20 Plicuri Unidoza",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:10.664165+00:00",
+    "url": "https://www.springfarma.com/impruvis-probiotic-fast-melt-cu-aroma-de-capsuni-si-zmeura-10-plicuri.html",
+    "name": "Impruvis Probiotic Fast Melt Capsuni si Zmeura 10 Plicuri",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "36.89"
+    "price": null
   },
   {
     "id": "prod3",
-    "url": "https://www.springfarma.com/magnevie-stress-resist-ashwagandha-30-comprimate-filmate-sanofi.html",
-    "name": "Magnevie Stress Resist Ashwagandha 30 Comprimate",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:14.783200+00:00",
+    "url": "https://www.springfarma.com/magneziu-bisglicinat-premium-60-capsule-boost4life.html",
+    "name": "Magneziu Bisglicinat Premium 60 Capsule Boost4Life",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "38.17"
+    "price": null
   },
   {
     "id": "prod4",
-    "url": "https://www.springfarma.com/enterogermina-forte-10-flacoane-5ml-suspensie-orala.html",
-    "name": "Enterogermina Forte 10 Flacoane 5ml",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:18.355821+00:00",
+    "url": "https://www.springfarma.com/forcapil-anticaderea-parului-30-comprimate.html",
+    "name": "Forcapil Anticaderea Parului 30 Comprimate",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "24.30"
+    "price": null
   },
   {
     "id": "prod5",
-    "url": "https://www.springfarma.com/magneziu-bisglicinat-premium-60-capsule-boost4life.html",
-    "name": "Magneziu Bisglicinat Premium 60 Capsule Boost4Life",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:21.468468+00:00",
+    "url": "https://www.springfarma.com/beres-magneziu-b6-50-tablete-10-tablete-cadou.html",
+    "name": "Beres Magneziu B6 50 Tablete + 10 Tablete Cadou",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "63.52"
+    "price": null
   },
   {
     "id": "prod6",
-    "url": "https://www.springfarma.com/forcapil-anticaderea-parului-30-comprimate.html",
-    "name": "Forcapil Anticaderea Parului 30 Comprimate",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:24.524539+00:00",
+    "url": "https://www.springfarma.com/ulei-premium-cu-efect-de-intarire-pentru-par-rosemary-and-mint-75-ml-difeel.html",
+    "name": "Ulei Premium Intarire Par Rosemary and Mint 75ml Difeel",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "52.06"
+    "price": null
   },
   {
     "id": "prod7",
-    "url": "https://www.springfarma.com/redoxitos-triple-action-vitamina-c-suport-imunitar-25-de-jeluri-gumate.html",
-    "name": "Redoxitos Triple Action Vitamina C 25 Jeluri Gumate",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:27.544774+00:00",
+    "url": "https://www.springfarma.com/aspenter-75-mg-x-28-comprimate-gastrorezistente.html",
+    "name": "Aspenter 75mg 28 Comprimate Gastrorezistente",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "20.16"
+    "price": null
   },
   {
     "id": "prod8",
-    "url": "https://www.springfarma.com/system-kollagen-11000-curcuma-ghimbir-30-flacoane-doppelherz.html",
-    "name": "Curcuma + Ghimbir 11000, System Kollagen, 30 flacoane, Doppelherz",
-    "status": "stock",
-    "lastCheck": "2026-03-31T12:54:34.396610+00:00",
+    "url": "https://www.springfarma.com/moller-s-omega-3-aroma-portocala-36-pestisori-gumati.html",
+    "name": "Moller's Omega 3 Aroma Portocala 36 Pestisori Gumati",
+    "status": "unknown",
+    "lastCheck": null,
     "lastChanged": null,
-    "price": "165.51"
+    "price": null
+  },
+  {
+    "id": "prod9",
+    "url": "https://www.springfarma.com/always-discreet-liners-long-plus-28-bucati.html",
+    "name": "Always Discreet Liners Long Plus 28 Bucati",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod10",
+    "url": "https://www.springfarma.com/bandelete-testare-glicemie-contour-plus-50-bucati-html.html",
+    "name": "Bandelete Testare Glicemie Contour Plus 50 Bucati",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod11",
+    "url": "https://www.springfarma.com/xylo-nasal-1mgml-picaturi-nazale-solutie-x-10-ml.html",
+    "name": "Xylo Nasal 1mg/ml Picaturi Nazale Solutie 10ml",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod12",
+    "url": "https://www.springfarma.com/plasturi-termici-cu-efect-de-incalzire-8-ore-1-buc-sanitayaki.html",
+    "name": "Plasturi Termici Efect Incalzire 8 Ore 1 Buc Sanitayaki",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod13",
+    "url": "https://www.springfarma.com/paracetamol-500mg-20-comprimate-antibiotice.html",
+    "name": "Paracetamol 500mg 20 Comprimate",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod14",
+    "url": "https://www.springfarma.com/enterogermina-forte-10-flacoane-5ml-suspensie-orala.html",
+    "name": "Enterogermina Forte 10 Flacoane 5ml Suspensie Orala",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod15",
+    "url": "https://www.springfarma.com/hofigal-gemoderivat-mladite-zmeur-libidou-crescut.html",
+    "name": "Hofigal Gemoderivat Mladite Zmeur Libidou Crescut",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod16",
+    "url": "https://www.springfarma.com/bio-vitality-nikvorm-sirop-pentru-eliminarea-parazitilor-intestinali-60ml.html",
+    "name": "Bio Vitality Nikvorm Sirop Eliminare Paraziti Intestinali 60ml",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod17",
+    "url": "https://www.springfarma.com/teste-de-masurare-a-glicemiei-codefree.html",
+    "name": "Teste Masurare Glicemie Codefree",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod18",
+    "url": "https://www.springfarma.com/lyprinol-complex-lipidic-marin-60-capsule.html",
+    "name": "Lyprinol Complex Lipidic Marin 60 Capsule",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod19",
+    "url": "https://www.springfarma.com/enroush-absorbante-bumbac-organic-super-10-bucati.html",
+    "name": "Enroush Absorbante Bumbac Organic Super 10 Bucati",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod20",
+    "url": "https://www.springfarma.com/coenzima-q10-dual-30-capsule.html",
+    "name": "Coenzima Q10 Dual 30 Capsule",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod21",
+    "url": "https://www.springfarma.com/parasinus-20-comprimate.html",
+    "name": "Parasinus 20 Comprimate",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod22",
+    "url": "https://www.springfarma.com/magneziu-bisglicinat-30-capsule-cosmo-pharm.html",
+    "name": "Magneziu Bisglicinat 30 Capsule Cosmo Pharm",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod23",
+    "url": "https://www.springfarma.com/naturalis-rehidrafort-cu-aroma-de-portocale-10-plicuri.html",
+    "name": "Naturalis Rehidrafort Aroma Portocale 10 Plicuri",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod24",
+    "url": "https://www.springfarma.com/benesio-tonico-forte-10-ml-tonic-pentru-organism-10-flacoane.html",
+    "name": "Benesio Tonico Forte 10ml Tonic Organism 10 Flacoane",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod25",
+    "url": "https://www.springfarma.com/colagen-lichid-ch-alpha-plus-30-fiole-buvabile-gelita-health.html",
+    "name": "Colagen Lichid CH-Alpha Plus 30 Fiole Buvabile Gelita Health",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod26",
+    "url": "https://www.springfarma.com/forcapil-formula-fortifianta-pentru-par-si-unghii-180-capsule.html",
+    "name": "Forcapil Formula Fortifianta Par si Unghii 180 Capsule",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod27",
+    "url": "https://www.springfarma.com/crema-dentara-cu-aroma-de-capsuni-tooth-mousse-40-g-gc-dental.html",
+    "name": "Crema Dentara Aroma Capsuni Tooth Mousse 40g GC Dental",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod28",
+    "url": "https://www.springfarma.com/nestle-optifibre-125-g.html",
+    "name": "Nestle Optifibre 125g",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod29",
+    "url": "https://www.springfarma.com/magnerot-500-mg-100-comprimate-protector-cardiac.html",
+    "name": "Magnerot 500mg 100 Comprimate Protector Cardiac",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod30",
+    "url": "https://www.springfarma.com/sun-d3-5000-ui-30-capsule-sun-wave-pharma.html",
+    "name": "Sun D3 5000 UI 30 Capsule Sun Wave Pharma",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod31",
+    "url": "https://www.springfarma.com/glucomannan-fibre-pentru-slabit-90-capsule-rotta-natura.html",
+    "name": "Glucomannan Fibre Pentru Slabit 90 Capsule Rotta Natura",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod32",
+    "url": "https://www.springfarma.com/benesio-hepafort-30-capsule.html",
+    "name": "Benesio Hepafort 30 Capsule",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod33",
+    "url": "https://www.springfarma.com/collanol-20-capsule-adjuvant-articulatii-sanatoase.html",
+    "name": "Collanol 20 Capsule Adjuvant Articulatii Sanatoase",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod34",
+    "url": "https://www.springfarma.com/neuroalfa-20-capsule-moi-benesio.html",
+    "name": "Neuroalfa 20 Capsule Moi Benesio",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod35",
+    "url": "https://www.springfarma.com/ulei-de-spalare-xerolact-1-l-rilastil.html",
+    "name": "Ulei de Spalare Xerolact 1L Rilastil",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod36",
+    "url": "https://www.springfarma.com/imuno-fattore-m-20-comprimate-laborest-italia.html",
+    "name": "Imuno Fattore M 20 Comprimate Laborest Italia",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod37",
+    "url": "https://www.springfarma.com/enroush-absorbante-bumbac-organic-normale-12-bucati.html",
+    "name": "Enroush Absorbante Bumbac Organic Normale 12 Bucati",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod38",
+    "url": "https://www.springfarma.com/magnevie-kids-30-comprimate-masticabile-sanofi.html",
+    "name": "Magnevie Kids 30 Comprimate Masticabile Sanofi",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod39",
+    "url": "https://www.springfarma.com/bioderma-atoderm-gel-de-dus-1l.html",
+    "name": "Bioderma Atoderm Gel de Dus 1L",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod40",
+    "url": "https://www.springfarma.com/rhinxyl-ha-1-mgml-10-ml-spray-nazal.html",
+    "name": "Rhinxyl HA 1mg/ml 10ml Spray Nazal",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod41",
+    "url": "https://www.springfarma.com/panadol-rapid-500-mg-12-comprimate-filmate.html",
+    "name": "Panadol Rapid 500mg 12 Comprimate Filmate",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
+  },
+  {
+    "id": "prod42",
+    "url": "https://www.springfarma.com/beres-vitamina-d3-junior-800-ui-50-comprimate.html",
+    "name": "Beres Vitamina D3 Junior 800 UI 50 Comprimate",
+    "status": "unknown",
+    "lastCheck": null,
+    "lastChanged": null,
+    "price": null
   }
 ]
