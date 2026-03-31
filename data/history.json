@@ -1,1 +1,51 @@
-{}
+{
+  "prod1": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.154357+00:00"
+    }
+  },
+  "prod2": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.212254+00:00"
+    }
+  },
+  "prod3": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.271893+00:00"
+    }
+  },
+  "prod4": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.329791+00:00"
+    }
+  },
+  "prod5": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.392593+00:00"
+    }
+  },
+  "prod6": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.456342+00:00"
+    }
+  },
+  "prod7": {
+    "2026-03-31": {
+      "status": "error",
+      "changed": false,
+      "checked_at": "2026-03-31T10:07:18.520229+00:00"
+    }
+  }
+}
