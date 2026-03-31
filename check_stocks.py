@@ -71,6 +71,12 @@ def check_stock(url):
             # Extrage prețul
             price = extract_price(soup)
 
+            # Dacă nu avem preț, tratăm produsul ca FĂRĂ STOC.
+            # Pe site-urile urmărite, lipsa prețului indică de obicei indisponibilitate.
+            if price is None:
+                print(f"    -> Preț negăsit: tratăm produsul ca FĂRĂ STOC")
+                return "nostock", None
+
             # 1. Verificare buton "Adaugă în coș" — cel mai fiabil indicator de stoc
             add_to_cart = soup.find(lambda tag: (
                 tag.name in ["button", "a", "input", "span", "div"]
@@ -90,7 +96,7 @@ def check_stock(url):
                 if any(x in tag_text for x in ["INDISPONIBIL", "OUT OF STOCK", "STOC EPUIZAT", "EPUIZAT"]):
                     print(f"    -> Text indisponibil în clasă CSS: FĂRĂ STOC")
                     return "nostock", price
-                if any(x in tag_text for x in ["\u00cen STOC", "IN STOC", "IN STOCK", "DISPONIBIL"]):
+                if any(x in tag_text for x in ["ÎN STOC", "IN STOC", "IN STOCK", "DISPONIBIL"]):
                     print(f"    -> Text în stoc în clasă CSS: ÎN STOC")
                     return "stock", price
 
@@ -99,14 +105,11 @@ def check_stock(url):
             if any(x in full_text for x in ["INDISPONIBIL", "OUT OF STOCK", "STOC EPUIZAT", "EPUIZAT"]):
                 print(f"    -> Text indisponibil în pagină: FĂRĂ STOC")
                 return "nostock", price
-            if any(x in full_text for x in ["\u00cen STOC", "IN STOC", "IN STOCK"]):
+            if any(x in full_text for x in ["ÎN STOC", "IN STOC", "IN STOCK"]):
                 print(f"    -> Text în stoc în pagină: ÎN STOC")
                 return "stock", price
 
-if price is None:
-    print(f"    -> Preț negăsit, presupunem FĂRĂ STOC")
-    return "nostock", price
-return "unknown", price
+            return "unknown", price
 
         except requests.exceptions.Timeout:
             print(f"    Attempt {attempt+1}: timeout")
